@@ -1,0 +1,132 @@
+body {
+    font-family: open sans, 'Noto Sans', helvetica neue, Helvetica, Arial, sans-serif;
+    background-color: #171717;
+    margin: 0;
+    z-index: 0;
+    height: 1750px;
+    overflow: auto;
+    align-items: center;
+}
+
+
+/****** Styling things of the top Panel ******/
+
+.profilePanel {
+    /* Panel that holds the Artist name, Artist Avatar, country and maybe more */
+    position: relative;
+    text-align: center;
+    height: 330px;
+}
+
+#panelImage {
+    filter: blur(8px);
+}
+
+#artistName {
+    /* Handles the styling of the Artist's name */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: white;
+    font-weight: 400;
+}
+
+#artistAvatar {
+    /* Handles the styling of the Artist's avatar */
+    height: 170px;
+    width: 170px;
+    border: 2px white solid;
+    border-radius: 25%;
+    transform: translateY(-185%);
+}
+
+#artist-additional-info {
+    position: absolute;
+    color: white;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+#artist-location {
+    position: absolute;
+    color: white;
+    top: 81.5%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.fa-map-marker-alt {
+    color: rgb(76, 141, 182);
+}
+
+
+/****** Styling of the nav bar ******/
+
+#navBox {
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    top: 30.5%;
+    background-color: #222;
+}
+
+#nav {
+    text-align: center;
+    padding: 0;
+    height: 60px;
+    margin: 0;
+}
+
+#nav li {
+    display: inline-block;
+    margin: 0px;
+    height: 48px;
+}
+
+#nav a {
+    display: inline-block;
+    color: white;
+    padding: 15px 15px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+#nav a:hover {
+    color: rgb(97, 181, 233);
+}
+
+#nav .current-page {
+    background-color: #151515;
+    color: rgb(97, 181, 233);
+}
+
+.about-me {
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+}
+
+.about-me h3 {
+    font-weight: 450;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #f1f1f1;
+}
+
+.about-me p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #bbb;
+}

@@ -1,0 +1,219 @@
+    body {
+        font-family: open sans, 'Noto Sans', helvetica neue, Helvetica, Arial, sans-serif;
+        background-color: #171717;
+        margin: 0;
+        z-index: 0;
+        height: 1750px;
+        overflow: auto;
+        align-items: center;
+    }
+    /****** Styling things of the top Panel ******/
+    
+    .profilePanel {
+        /* Panel that holds the Artist name, Artist Avatar, country and maybe more */
+        text-align: center;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #panelImage {
+        filter: blur(8px);
+    }
+    
+    #artistName {
+        /* Handles the styling of the Artist's name */
+        color: white;
+        font-weight: 400;
+        margin: 5px 0;
+    }
+    
+    #artistAvatar {
+        /* Handles the styling of the Artist's avatar */
+        height: 170px;
+        width: 170px;
+        border: 2px white solid;
+        border-radius: 25%;
+    }
+    
+    .artist-avatar-container {
+        margin: 25px 0 0 0;
+    }
+    
+    #artist-additional-info {
+        color: white;
+        font-weight: 100;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    #artist-location {
+        color: white;
+        text-align: center;
+        font-weight: 100;
+        font-size: 15px;
+        border-top: 1px solid rgba(95, 158, 160, 0.314);
+        padding-top: 4px;
+    }
+    
+    .fa-map-marker-alt {
+        color: rgb(76, 141, 182);
+    }
+    /****** Styling of the nav bar ******/
+    
+    #navBox {
+        background-color: #222;
+        font-size: 1.em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    #nav,
+    #nav li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #nav {
+        flex: 1;
+        max-width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #nav a {
+        display: inline-block;
+        color: white;
+        padding: 15px 15px;
+        text-decoration: none;
+        transition: color 0.5s ease;
+    }
+    
+    #nav a:hover {
+        color: rgb(97, 181, 233);
+    }
+    
+    #nav .current-page {
+        background-color: #151515;
+        color: rgb(97, 181, 233);
+    }
+    /******* Styling of the portfolio gallery *******/
+    
+    .image-text {
+        color: white;
+    }
+    /* The whole section that holds every image*/
+    
+    .gallery-section {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    /* Sub section of the gallery-section that holds every image */
+    
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    /* The box containing the images */
+    
+    .gallery div {
+        display: inline-block;
+        margin: 4px;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    /* Styles the actual images inside the div */
+    
+    .gallery div>img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    /*Img marked as mature content*/
+    
+    .mature-content {
+        filter: blur(8px) brightness(50%) grayscale(0.7);
+    }
+    /*The actual "Mature Content" Text*/
+    
+    .gallery div .mature-content-text {
+        color: white;
+        position: absolute;
+        height: 30px;
+        transform: translateX(-50%) translateY(-700%);
+        color: white;
+        font-size: 25px;
+    }
+    /*The Ban icon*/
+    
+    .fa-ban {
+        color: red;
+    }
+    /* Icon top left of images to indicate multiple images*/
+    
+    .gallery div .fa-images {
+        color: rgb(224, 208, 208);
+        background-color: rgba(77, 77, 77, 0.795);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        font-size: 18px;
+        width: 25px;
+        height: 20px;
+        border-radius: 15%;
+    }
+    /****** Overlay effect ******/
+    /* The actual overlay covering the div/image */
+    
+    .gallery div .overlay {
+        position: absolute;
+        top: 0%;
+        left: -4px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        color: white;
+        opacity: 0;
+        transition: opacity 0.35s;
+    }
+    /* The style of overlay when mouse cursor hovers the overlay */
+    
+    .gallery div .overlay:hover {
+        opacity: 1;
+    }
+    /* Text inside the overlay */
+    
+    .gallery div .overlay-text {
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        transform: translateY(50%) translateX(-50%);
+        color: white;
+        font-weight: bolder;
+        font-size: 20.5px;
+    }
+    
+    @media (max-width: 732px) {
+        .gallery {
+            flex-direction: column;
+            align-content: center;
+        }
+        .gallery div {
+            width: 500px;
+            height: 500px;
+        }
+    }
